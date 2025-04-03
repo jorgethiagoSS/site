@@ -79,7 +79,97 @@
         .whatsapp-float:hover { transform: scale(1.1); }
         .welcome-section { position: relative; margin: 0; padding: 0; height: 400px; display: flex; align-items: center; justify-content: center; color: white; transition: margin-top 0.3s ease; }
         .welcome-section img { width: 100%; height: 100%; object-fit: cover; }
-        header a.reservar { text-decoration: none; }
+          header a.reservar { text-decoration: none; }
+
+        /* NOVO CSS para galeria com scroll horizontal no mobile */
+  /* === PONTOS PRÓXIMOS – MOBILE === */
+@media (max-width: 768px) {
+    .gallery, .locations-container {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+    }
+
+    .gallery img, .locations-container img {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 3px solid #ddd;
+    }
+
+    .locations-container .location {
+        flex: 0 0 250px;
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .locations-container .location h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 1.1;
+    }
+
+    #pontos-proximos {
+        overflow-x: auto;
+    }
+
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* === PONTOS PRÓXIMOS – DESKTOP === */
+@media (min-width: 769px) {
+    .locations-container {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    .locations-container .location {
+        flex: 0 0 250px;
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .locations-container .location h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 1.1;
+    }
+
+    .locations-container img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 3px solid #ddd;
+    }
+
+    #pontos-proximos {
+        overflow-x: auto;
+    }
+}
     </style>
 </head>
 <body>
@@ -99,7 +189,7 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <a href="https://wa.me/556132639131" class="reservar">Faça sua reserva</a>
+        <a href="https://wa.me/556132639131?text=Ol%C3%A1%20%F0%9F%98%8A%2C%20estou%20entrando%20em%20contato%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20hospedagem." class="reservar">Faça sua reserva</a>
     </header>
 
     <script>
@@ -126,17 +216,7 @@
             <img src="quarto2.jpeg" alt="Suíte Premium">
             <img src="quarto3.jpeg" alt="Quarto Executivo">
         </div>
-    </div>
-
-    <div class="section" id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div class="gallery">
-            <img src="cafe1.jpeg" alt="Café da Manhã 1">
-            <img src="cafe2.jpeg" alt="Café da Manhã 2">
-            <img src="cafe3.jpeg" alt="Café da Manhã 3">
-	    <img src="cafe4.jpeg" alt="Café da Manhã 4">
-        </div>
-        <ul>
+    <ul>
             ✔ Café da manhã incluso
             ✔ Ar condicionado
             ✔ Frigobar
@@ -146,6 +226,17 @@
             ✔ Recepção 24 horas
             ✔ Limpeza diária
         </ul>
+    </div>
+
+    <div class="section" id="servicos">
+        <h2>Café da Manhã</h2>
+        <div class="gallery">
+            <img src="cafe1.jpeg" alt="Café da Manhã 1">
+            <img src="cafe2.jpeg" alt="Café da Manhã 2">
+            <img src="cafe3.jpeg" alt="Café da Manhã 3">
+	    <img src="cafe4.jpeg" alt="Café da Manhã 4">
+        </div>
+    
     </div>
 
     <div class="section" id="pontos-proximos">
@@ -186,9 +277,9 @@
         <p><strong>✉️</strong> <a href="mailto:reservas@alfaplazahotel.com.br">reservas@alfaplazahotel.com.br</a></p>
     </div>
 
-    <a href="https://wa.me/556132639131" class="whatsapp-float">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-    </a>
+   <a href="https://wa.me/556132639131?text=Ol%C3%A1%20%F0%9F%98%8A%2C%20estou%20entrando%20em%20contato%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20hospedagem." class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 <footer style="background: #333; color: white; padding: 20px; text-align: center;">
     <p>&copy; 2025 Alfa Plaza Hotel. Todos os direitos reservados.</p>
