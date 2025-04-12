@@ -119,30 +119,57 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .lightbox {
-        flex-direction: row;
-        gap: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: space-between;
-        box-sizing: border-box;
-    }
+  /* Regras para o lightbox sem a classe "show" (oculto) */
+  .lightbox {
+    padding: 20px 10px !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    position: fixed;
+    display: none; /* garante que o lightbox inicie oculto */
+  }
 
-    .lightbox-prev,
-    .lightbox-next {
-        font-size: 36px;
-        padding: 12px;
-        z-index: 10002;
-    }
+  /* Quando o lightbox tiver a classe "show", ele será exibido */
+  .lightbox.show {
+    display: flex;
+  }
 
-    .lightbox img {
-        max-width: 80vw;
-        max-height: 60vh;
-    }
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 32px !important;
+    padding: 12px !important;
+    z-index: 10002 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox img {
+    max-width: 85vw !important;
+    max-height: 70vh;
+    height: auto;
+    z-index: 10001;
+  }
+
+  .lightbox-close {
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+  }
 }
-
         @media (max-width: 768px) {
             .gallery, .locations-container {
                 display: flex;
@@ -410,11 +437,11 @@
 </a>
 
  <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-    <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
-    <img id="lightbox-img" src="" alt="Imagem Ampliada">
-    <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
-    <span class="lightbox-close" onclick="hideLightbox()">&times;</span>
+   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Imagem Ampliada">
+  <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+  <span class="lightbox-close" onclick="hideLightbox()">&times;</span>
 </div>
 
    
