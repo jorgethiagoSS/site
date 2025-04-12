@@ -148,11 +148,11 @@
   }
 
   .lightbox-prev {
-    left: calc(5vw - 40px); /* seta vai para fora da imagem, mas ainda dentro da tela */
+    left: 5px; /* fixo, garante visibilidade em qualquer celular */
   }
 
   .lightbox-next {
-    right: calc(5vw - 40px);
+    right: 5px;
   }
 
   .lightbox img {
@@ -167,8 +167,7 @@
     right: 20px;
     font-size: 30px;
   }
-}       
-
+}
  @media (max-width: 768px) {
             .gallery, .locations-container {
                 display: flex;
