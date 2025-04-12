@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfa Plaza Hotel</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #fff; color: #333; }
+        body { font-family: Poppins, sans-serif; margin: 0; padding: 0; text-align: center; background: #fff; color: #333; }
         header { 
             background: #fff; 
             color: #000; 
@@ -120,21 +122,26 @@
     .lightbox {
         flex-direction: row;
         gap: 10px;
-        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: space-between;
+        box-sizing: border-box;
     }
 
     .lightbox-prev,
     .lightbox-next {
         font-size: 36px;
-        padding: 8px;
+        padding: 12px;
+        z-index: 10002;
     }
 
     .lightbox img {
         max-width: 80vw;
         max-height: 60vh;
     }
-
-        }
+}
 
         @media (max-width: 768px) {
             .gallery, .locations-container {
@@ -232,15 +239,16 @@
             <div></div>
             <div></div>
         </div>
-        <nav id="menu">
-            <ul>
-                <li><a href="#acomodacoes">Acomodações</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#pontos-proximos">Pontos Próximos</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+   <nav id="menu">
+    <ul>
+        <li><a href="#acomodacoes">Acomodações</a></li>
+        <li><a href="#acessibilidade">Acessibilidade</a></li>
+        <li><a href="#cafedamanha">Café da Manhã</a></li>
+        <li><a href="#pontos-proximos">Pontos Próximos</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
         <a href="https://wa.me/556132639131?text=Ol%C3%A1%20%F0%9F%98%8A%2C%20estou%20entrando%20em%20contato%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20hospedagem." class="reservar">Faça sua reserva</a>
     </header>
 
@@ -263,32 +271,80 @@
 
     <div class="section" id="acomodacoes">
         <h2>Nossas Acomodações</h2>
+  <p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+       Nossas acomodações foram pensadas para unir conforto, praticidade e um atendimento atencioso, proporcionando uma experiência agradável e acolhedora do início ao fim da sua estadia..
+    </p>
+
         <div class="gallery gallery-acomodacoes">
             <img src="quarto1.jpeg" alt="Quarto Luxo">
             <img src="quarto2.jpeg" alt="Suíte Premium">
             <img src="quarto3.jpeg" alt="Quarto Executivo">
         </div>
     <ul>
-            ✔ Café da manhã incluso
-            ✔ Ar condicionado
-            ✔ Frigobar
-            ✔ Tv a Cabo
-            ✔ Garagem coberta privativa
-            ✔ Wi-Fi de alta velocidade
-            ✔ Recepção 24 horas
-            ✔ Limpeza diária
-        </ul>
-    </div>
-
-    <div class="section" id="servicos">
-        <h2>Café da Manhã</h2>
-        <div class="gallery gallery-cafe">
-            <img src="cafe2.jpeg" alt="Café da Manhã 2">
-            <img src="cafe3.jpeg" alt="Café da Manhã 3">
-	    <img src="cafe4.jpeg" alt="Café da Manhã 4">
-        </div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; max-width: 600px; margin: 0 auto; font-size: 18px; text-align: left;">
+    <div>✔ Café da manhã incluso</div>
+    <div>✔ Ar condicionado</div>
+    <div>✔ Frigobar</div>
+    <div>✔ TV a cabo</div>
+    <div>✔ Garagem coberta privativa</div>
+    <div>✔ Wi-Fi de alta velocidade</div>
+    <div>✔ Recepção 24 horas</div>
+    <div>✔ Limpeza diária</div>
+</div>
+</div>
     
+
+
+<div class="section" id="acessibilidade">
+    <h2>Acessibilidade</h2>
+<p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+        No Alfa Plaza Hotel, acreditamos que acolher bem é acolher a todos. Somos um hotel <strong>100% acessível</strong>, com estrutura adaptada para garantir conforto, segurança e autonomia a pessoas com mobilidade reduzida ou necessidades específicas.
+    </p>
+    <div class="gallery gallery-acessibilidade">
+        <img src="quarto-adaptado.jpeg" alt="Quarto adaptado">
+        <img src="quarto-adaptado2.jpeg" alt="Quarto adaptado adicional">
+        <img src="acessibilidade.jpeg" alt="Hotel adaptado com recursos de acessibilidade">
     </div>
+    
+    <p style="max-width: 700px; margin: 0 auto 20px; font-size: 18px; line-height: 1.6;">
+        Seguimos rigorosamente as diretrizes da <strong>ABNT NBR 9050</strong>, com:
+    </p>
+
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; max-width: 600px; margin: 20px auto 0 auto; font-size: 18px; text-align: left; line-height: 1.3;">
+
+
+    <div>✔ Quartos totalmente adaptados para cadeirantes</div>
+    <div>✔ Ampla circulação em todos os ambientes</div>
+    <div>✔ Piso tátil de alerta próximo a escadas e elevadores</div>
+    <div>✔ Sinalização em Braile nos elevadores e corrimãos</div>
+    <div>✔ Sinalizadores fotoluminescentes nas escadas</div>
+    <div>✔ Banheiros com barras de apoio</div>
+</div>
+
+</div>
+
+   <div class="section" id="cafedamanha">
+    <h2>Café da Manhã</h2>
+
+    <p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+        Comece o dia com sabor e qualidade! Nosso café da manhã é servido diariamente com uma variedade de frutas frescas, pães, bolos, sucos, café — tudo preparado com carinho para oferecer a melhor experiência aos nossos hóspedes.
+    </p>
+
+
+    <div class="gallery gallery-cafe">
+        <img src="cafe2.jpeg" alt="Café da Manhã 2">
+        <img src="cafe3.jpeg" alt="Café da Manhã 3">
+        <img src="cafe4.jpeg" alt="Café da Manhã 4">
+  <p style="max-width: 700px; margin: 0 auto 20px auto; font-size: 18px; line-height: 1.6;">
+  <i data-lucide="clock" style="width: 20px; vertical-align: middle;"></i> <strong>Horários:</strong><br>
+  Segunda a sexta: <strong>06:00 às 10:00</strong><br>
+  Domingos e feriados: <strong>07:00 às 10:30</strong>
+</p>
+    </div>
+</div>
+    
+  
 
     <div class="section" id="pontos-proximos">
         <h2>Pontos Próximos</h2>
@@ -321,12 +377,33 @@
     </div>
 </div>
 
-    <div class="section contact" id="contato">
-        <h2>Contato</h2>
-        <p><strong>📍</strong> Av. Central - Lote 1040 - Núcleo Bandeirante, Brasília - DF, 71720-550</p>
-        <p><strong>📞</strong> (61) 3263-9131</p>
-        <p><strong>✉️</strong> <a href="mailto:reservas@alfaplazahotel.com.br">reservas@alfaplazahotel.com.br</a></p>
+<div class="section contact" id="contato" style="text-align: left; max-width: 700px; margin: 0 auto; padding: 10px 0; font-size: 18px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Contato</h2>
+
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+        <i data-lucide="map-pin" style="width: 20px;"></i>
+        <span>Av. Central - Lote 1040 - Núcleo Bandeirante, Brasília - DF, 71720-550</span>
     </div>
+
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+        <i data-lucide="phone" style="width: 20px;"></i>
+        <span>(61) 3263-9131</span>
+        <a href="https://wa.me/556132639131?text=Ol%C3%A1%20%F0%9F%98%8A%2C%20estou%20entrando%20em%20contato%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20hospedagem." target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 16px; color: #32CD32; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px;">
+            WhatsApp
+        </a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <i data-lucide="mail" style="width: 20px;"></i>
+        <a href="mailto:reservas@alfaplazahotel.com.br" style="color: #333; text-decoration: none;">
+            reservas@alfaplazahotel.com.br
+        </a>
+    </div>
+ <div style="height: 20px;"></div>
+</div>
+
+
 
    <a href="https://wa.me/556132639131?text=Ol%C3%A1%20%F0%9F%98%8A%2C%20estou%20entrando%20em%20contato%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20hospedagem." class="whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
@@ -403,6 +480,12 @@ document.addEventListener('keydown', function (e) {
 <footer style="background: #333; color: white; padding: 20px; text-align: center;">
     <p>&copy; 2025 Alfa Plaza Hotel. Todos os direitos reservados.</p>
 </footer>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
