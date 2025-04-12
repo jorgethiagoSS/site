@@ -119,7 +119,6 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-  /* Regras para o lightbox sem a classe "show" (oculto) */
   .lightbox {
     padding: 20px 10px !important;
     justify-content: center !important;
@@ -129,10 +128,9 @@
     overflow: hidden;
     align-items: center;
     position: fixed;
-    display: none; /* garante que o lightbox inicie oculto */
+    display: none;
   }
 
-  /* Quando o lightbox tiver a classe "show", ele será exibido */
   .lightbox.show {
     display: flex;
   }
@@ -150,11 +148,11 @@
   }
 
   .lightbox-prev {
-    left: 10px;
+    left: calc(5vw - 40px); /* seta vai para fora da imagem, mas ainda dentro da tela */
   }
 
   .lightbox-next {
-    right: 10px;
+    right: calc(5vw - 40px);
   }
 
   .lightbox img {
@@ -169,8 +167,9 @@
     right: 20px;
     font-size: 30px;
   }
-}
-        @media (max-width: 768px) {
+}       
+
+ @media (max-width: 768px) {
             .gallery, .locations-container {
                 display: flex;
                 overflow-x: auto;
